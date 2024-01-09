@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Saludo from "./components/saludo";
+import {Despedida, Perensejo, Postre} from "./components/saludo";
 
+
+//*componente de aplicacion
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hola React</h1>
+      <hr/>
+      <Saludo
+        persona= {{
+          nombre:'Juan',
+          edad:25,
+          colorCabello: 'negro'
+        }}
+
+        nacionalidad= 'Colombia'
+      />
+      <hr/>
+      <Saludo
+        persona={{
+          nombre:'Manuel',
+          edad:30,
+          colorCabello: 'pintado'
+        }}
+      />
+      <hr/>
+      <Despedida>
+      </Despedida>
+      <hr/>
+      <Perensejo>
+      </Perensejo>
+      <hr/>
+      <Postre>
+      </Postre>
     </div>
   );
 }
